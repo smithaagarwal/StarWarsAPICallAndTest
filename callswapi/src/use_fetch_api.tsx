@@ -14,9 +14,9 @@ export const useFetchAPI = <T,>(url: string) => {
         } else if (response.status === 500) {
           setIsFetching(false);
           setError("Oops... something went wrong, try again 🤕");
-        } else if (response.status === 418) {
+        } else if (response.status === 404 || response.status === 418) {
           setIsFetching(false);
-          setError("418 I'm a tea pot, silly");
+          setError(`${response.status} I'm a tea pot, silly`);
         }
       } catch (e: unknown) {
         setIsFetching(false);
