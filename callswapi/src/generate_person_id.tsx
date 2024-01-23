@@ -10,7 +10,7 @@ export const GeneratePersonID: React.FC<GeneratePersonIDProps> = ({
   return (
     <>
       <button onClick={() => setPersonID(generateRandomNum())}>
-        Get Star Wars Person
+        Show Random Star Wars Person Details
       </button>
     </>
   );
