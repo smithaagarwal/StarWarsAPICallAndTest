@@ -1,6 +1,7 @@
 import { http, HttpResponse } from "msw";
 
 const notFoundResponseData = { status: 404 };
+const status500ResponseData = { status: 500 };
 const validResponseData = {
   name: "Darth Vader",
   height: "202",
@@ -31,5 +32,8 @@ export const handlers = [
   ),
   http.get("https://swapi.dev/api/people/0", () => {
     return new HttpResponse(null, notFoundResponseData);
+  }),
+  http.get("https://swapi.dev/api/people/90", () => {
+    return new HttpResponse(null, status500ResponseData);
   }),
 ];
