@@ -9,6 +9,7 @@ export const useFetchAPI = <T,>(url: string) => {
         const response = await fetch(url);
         setIsFetching(false);
         if (response.status === 200) {
+          setError("");
           const json = await response.json();
           setData(json);
         } else if (response.status === 500) {
