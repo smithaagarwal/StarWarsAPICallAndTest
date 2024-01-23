@@ -30,11 +30,13 @@ export const ShowPersonDetails: React.FC<ShowPersonDetailsProps> = ({
     <>
       {response.isFetching ? (
         <p>Fetching...</p>
-      ) : (
-<div>
+      ) : response.error.length === 0 ? (
+        <div>
           <pre>Name:{response.data?.name}</pre>
           <pre>Birth Year: {response.data?.birth_year}</pre>
-          </div>
+        </div>
+      ) : (
+        <p>{response.error}</p>
       )}
     </>
   );
