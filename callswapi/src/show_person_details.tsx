@@ -32,6 +32,7 @@ export const ShowPersonDetails: React.FC<ShowPersonDetailsProps> = ({
         <p>Fetching...</p>
       ) : response.error.length === 0 ? (
         <div>
+          <pre> {JSON.stringify(response.data, null, 2)}</pre>
           <pre>Name:{response.data?.name}</pre>
           <pre>Birth Year: {response.data?.birth_year}</pre>
         </div>
