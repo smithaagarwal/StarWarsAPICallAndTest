@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
     "dev": "vite",
     "build": "tsc && vite build",
     "test": "vitest",
@@ -30,6 +31,7 @@
     "eslint-plugin-react-refresh": "^0.4.5",
     "jsdom": "^24.0.0",
     "msw": "^2.1.4",
+    "prettier": "^3.2.4",
     "typescript": "^5.2.2",
     "vite": "^5.0.8",
     "vitest": "^1.2.1"

@@ -20,7 +20,7 @@ describe("ShowPersonDetails Component", () => {
   it("renders error message when 500 status is received", async () => {
     render(<ShowPersonDetails personID={90} />);
     const screenError = await screen.findByText(
-      "Oops... something went wrong, try again 🤕"
+      "Oops... something went wrong, try again 🤕",
     );
     expect(screenError).toBeInTheDocument();
   });

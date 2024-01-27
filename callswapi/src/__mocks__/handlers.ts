@@ -28,7 +28,7 @@ const validResponseData = {
 
 export const handlers = [
   http.get("https://swapi.dev/api/people/4", () =>
-    HttpResponse.json(validResponseData)
+    HttpResponse.json(validResponseData),
   ),
   http.get("https://swapi.dev/api/people/0", () => {
     return new HttpResponse(null, notFoundResponseData);
